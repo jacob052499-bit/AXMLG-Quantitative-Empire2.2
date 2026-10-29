@@ -1,0 +1,123 @@
+{
+  "reviewedAt": "2026-10-23",
+  "scope": "EL1 technical factor evidence and logic; primary literature informs methodology, not a replication or guarantee of investment results.",
+  "references": [
+    {
+      "id": "HLZ2016",
+      "title": "… and the Cross-Section of Expected Returns",
+      "authors": "Harvey, Liu & Zhu",
+      "year": 2016,
+      "url": "https://people.duke.edu/~charvey/Research/Published_Papers/P118_and_the_cross.PDF",
+      "application": "保留完整候選與淘汰原因，對本次候選家族進行多重檢定；不把挑中的高 IC 當作 Alpha 證明。",
+      "limit": "本次校正不涵蓋使用者跨研究反覆試參；未重製論文的因子資料庫或歷史 t 值門檻。"
+    },
+    {
+      "id": "BH1995",
+      "title": "Controlling the False Discovery Rate: A Practical and Powerful Approach to Multiple Testing",
+      "authors": "Benjamini & Hochberg",
+      "year": 1995,
+      "url": "https://rss.onlinelibrary.wiley.com/doi/10.1111/j.2517-6161.1995.tb02031.x",
+      "application": "提供 BH 調整 p 值，完整保留原始 p 值與檢定家族大小。",
+      "limit": "BH 依賴獨立性或適當正相依條件；不能對任意相關因子直接宣稱有限樣本 FDR 保證。"
+    },
+    {
+      "id": "BY2001",
+      "title": "The Control of the False Discovery Rate in Multiple Testing under Dependency",
+      "authors": "Benjamini & Yekutieli",
+      "year": 2001,
+      "url": "https://www.math.tau.ac.il/~ybenja/depApr27.pdf",
+      "application": "預設使用較保守的 BY 多重檢定校正，包含無效／缺樣本的已嘗試候選。",
+      "limit": "輸入 p 值是 HAC 常態漸近近似；BY 不會修復非平穩、錯誤模型或資料偏差。"
+    },
+    {
+      "id": "NW1987",
+      "title": "A Simple, Positive Semi-Definite, Heteroskedasticity and Autocorrelation Consistent Covariance Matrix",
+      "authors": "Newey & West",
+      "year": 1987,
+      "url": "https://www.nber.org/system/files/working_papers/t0055/t0055.pdf",
+      "application": "使用 Bartlett 權重估計 IC 均值的 HAC 標準誤、t 值及漸近雙尾 p 值。時序採不重疊區塊 IC；橫斷面採逐時點 IC，lag 至少涵蓋標籤期。",
+      "limit": "非有限樣本精確檢定；樣本少、退化變異與非平穩時不提供顯著性結論。"
+    },
+    {
+      "id": "GKX2020",
+      "title": "Empirical Asset Pricing via Machine Learning",
+      "authors": "Gu, Kelly & Xiu",
+      "year": 2020,
+      "url": "https://doi.org/10.1093/rfs/hhaa009",
+      "application": "採按時間順序的訓練／驗證／最終測試分期；本 App 另在邊界移除跨期標籤並加隔離根數，方向、ECDF 與相關性只使用訓練期。",
+      "limit": "未重製論文的神經網路、樹模型或股票基本面資料；顯示過的測試期一律屬已查看歷史。"
+    },
+    {
+      "id": "FIM2012",
+      "title": "Trading Costs of Asset Pricing Anomalies",
+      "authors": "Frazzini, Israel & Moskowitz",
+      "year": 2012,
+      "url": "https://pages.stern.nyu.edu/~afrazzin/pdf/Trading%20Cost%20of%20Asset%20Pricing%20Anomalies%20-%20Frazzini%2C%20Israel%20and%20Moskowitz.pdf",
+      "application": "分列毛／淨報酬、成本壓力、換手、排名緩衝及小幅再平衡門檻，所有成交含期末結算都計成本。",
+      "limit": "此處為固定 bps 成本模型，沒有論文的機構成交、價量衝擊及容量校準資料。"
+    },
+    {
+      "id": "DGU2009",
+      "title": "Optimal Versus Naive Diversification: How Inefficient is the 1/N Portfolio Strategy?",
+      "authors": "DeMiguel, Garlappi & Uppal",
+      "year": 2009,
+      "url": "https://doi.org/10.1093/rfs/hhm075",
+      "application": "保留同期間、同成本的全資產等權基準，提供等權／前序逆波動，加入集中度上限與現金配置。",
+      "limit": "不宣稱任一權重法必然優於 1/N；未加入需要更多估計假設的黑箱均值變異數最佳化。"
+    },
+    {
+      "id": "DSR2014",
+      "title": "The Deflated Sharpe Ratio: Correcting for Selection Bias, Backtest Overfitting and Non-Normality",
+      "authors": "Bailey & Lopez de Prado",
+      "year": 2014,
+      "url": "https://www.davidhbailey.com/dhbpapers/deflated-sharpe.pdf",
+      "application": "參數研究顯示全部試驗數及 DSR 常態近似情境，使用訓練日報酬偏態、峰態與候選 Sharpe 離散程度。",
+      "limit": "候選相依與有效試驗數未知；使用總組數作獨立試驗數情境，不是精確獲利機率，也未調整跨研究搜尋。"
+    },
+    {
+      "id": "NV2016",
+      "title": "A Taxonomy of Anomalies and Their Trading Costs",
+      "authors": "Novy-Marx & Velikov",
+      "year": 2016,
+      "url": "https://mysimon.rochester.edu/novy-marx/research/ToAatTC.pdf",
+      "application": "策略提案保留不同進出場門檻、排名緩衝與換手限制；將驗證期雙倍成本納入可用性門檻。",
+      "limit": "沒有重製股票樣本與機構交易成本；固定 bps 不是市場衝擊或容量估計。"
+    },
+    {
+      "id": "AHM2019",
+      "title": "A Backtesting Protocol in the Era of Machine Learning",
+      "authors": "Arnott, Harvey & Markowitz",
+      "year": 2019,
+      "url": "https://people.duke.edu/~charvey/Research/Published_Papers/SSRN-id3275654.pdf",
+      "application": "按時間凍結因子方向、權重及轉換，區分探索診斷與規則選擇，保存所有嘗試；顯示過的測試期標為已查看歷史。",
+      "limit": "實作受研究流程啟發，沒有文獻所保證的最佳模型或未來獲利。"
+    },
+    {
+      "id": "HXZ2020",
+      "title": "Replicating Anomalies",
+      "authors": "Hou, Xue & Zhang",
+      "year": 2020,
+      "url": "https://global-q.org/uploads/1/2/2/6/122679606/houxuezhang2019rfs.pdf",
+      "application": "保留失敗候選、明示資料與來源限制；單商品價格訊號不冒充股票橫斷面價值或品質因子。",
+      "limit": "未取得 point-in-time 股票基本面、下市與公司行動資料，未重製論文的實證異象資料庫。"
+    },
+    {
+      "id": "TSMOM2012",
+      "title": "Time Series Momentum",
+      "authors": "Moskowitz, Ooi & Pedersen",
+      "year": 2012,
+      "url": "https://fairmodel.econ.yale.edu/ec439/mosk.pdf",
+      "application": "清楚區分單商品時序動能與多標的橫斷面排名；提案方向仍由本輪前序訓練證據決定。",
+      "limit": "不把小時線技術因子視為論文一至十二個月期貨動能策略的複製。"
+    },
+    {
+      "id": "PBO2017",
+      "title": "The Probability of Backtest Overfitting",
+      "authors": "Bailey, Borwein, Lopez de Prado & Zhu",
+      "year": 2017,
+      "url": "https://escholarship.org/uc/item/4w1110bb",
+      "application": "說明大量參數搜尋的選擇偏誤與持續保留候選的重要性。",
+      "limit": "本版沒有將 DSR 或三個前序因子窗口冒充 CSCV／PBO；未實作完整 PBO。"
+    }
+  ]
+}

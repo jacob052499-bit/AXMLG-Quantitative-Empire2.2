@@ -1,0 +1,10 @@
+{
+  "product": "AXMLG Quantitative Empire",
+  "version": "2.3.0",
+  "distribution": "AXMLG-Quantitative-Empire-Local-Windows-x64.zip",
+  "sha256": "6721a53c161fab093bf7a8287f6816d2389f0b4123fdc47e26c969cdee165cbe",
+  "requiresLogin": false,
+  "requiresLicense": false,
+  "packaging": "Standalone customer allowlist; no credentials, personal research or historical backups",
+  "completedAt": "2026-10-27T14:20:52.709Z"
+}

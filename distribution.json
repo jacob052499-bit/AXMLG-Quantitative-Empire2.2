@@ -1,0 +1,10 @@
+{
+  "product": "AXMLG Quantitative Empire",
+  "version": "2.3.0",
+  "mode": "standalone-local",
+  "port": 4311,
+  "permanent": true,
+  "requiresLicense": false,
+  "profile": "commercial",
+  "requiresLogin": false
+}

@@ -1,0 +1,13 @@
+data/
+*.log
+.runtime/
+node_modules/
+__pycache__/
+*.pyc
+
+.desktop/
+.python/
+dist/*.zip
+.env*
+*.pem
+portal-cloud/.netlify/

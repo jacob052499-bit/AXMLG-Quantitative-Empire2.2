@@ -1,0 +1,2 @@
+// Compatibility helper for existing integration tests: no account or cookies.
+export function authenticatedFetch(){return async(input,settings={})=>{const url=new URL(input),method=(settings.method||'GET').toUpperCase();if(['GET','HEAD'].includes(method))return fetch(input,settings);const v=await(await fetch(url.origin+'/api/workspace')).json();const headers=new Headers(settings.headers);headers.set('X-QE-CSRF',v.requestToken);return fetch(input,{...settings,headers});};}

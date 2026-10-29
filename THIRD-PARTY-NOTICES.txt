@@ -1,0 +1,12 @@
+AXMLG Quantitative Empire 2.0 · Third-party components
+
+Apache ECharts: Apache License 2.0. License and NOTICE in app/vendor/echarts-LICENSE.txt and echarts-NOTICE.txt.
+Electron 45.0.0: MIT, Chromium and other components under their respective licenses. See .desktop/runtime-v45.0.0/LICENSE and LICENSES.chromium.html.
+Python 3.12.14: Python Software Foundation License. See .python/LICENSE.txt.
+NumPy 2.3.5: BSD and bundled dependencies; see .python/Lib/site-packages/numpy-2.3.5.dist-info/licenses/.
+pandas 3.0.1: BSD and bundled dependencies; see .python/Lib/site-packages/pandas-3.0.1.dist-info/licenses/.
+python-dateutil 2.9.0.post0: Apache/BSD; see python_dateutil-2.9.0.post0.dist-info/.
+six 1.17.0: MIT; see six-1.17.0.dist-info/.
+tzdata 2026.5: Apache/public-domain timezone data; see tzdata-2026.5.dist-info/.
+
+Retain these notices and the complete third-party license files when redistributing. Reference paper links are research reading, not included investment guarantees or a license to redistribute market data.
